@@ -50,7 +50,7 @@ module BulmaFormBuilder
         content_tag :div, class: 'block' do
           content_tag :div, class: 'notification is-danger' do
             heading = content_tag :h2 do
-              "#{@template.pluralize(object.errors.count, 'error')} prohibited this #{object.class} from being saved:"
+              I18n.t(:"errors.template.header", model: object.class, count: object.errors.count)
             end
             ul = content_tag :ul do
               object.errors.full_messages.collect do |err|
