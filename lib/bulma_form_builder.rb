@@ -105,6 +105,17 @@ module BulmaFormBuilder
                   placeholder: placeholder, size: "10x4")
       end
     end
+
+    def labeled_email_field attr_name, label: nil, icon: nil, placeholder: nil, help_text: nil
+      horizontal_field_wrap(attr_name,
+                            icon: icon,
+                            label: label,
+                            help_text: help_text) do |classes|
+        email_field(attr_name, class: "input #{classes}", autocomplete: 'email',
+                    placeholder: placeholder)
+      end
+    end
+  
   
     def labeled_text_field attr_name, label: nil, icon: nil, placeholder: nil, help_text: nil
       horizontal_field_wrap(attr_name,
