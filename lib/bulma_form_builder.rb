@@ -24,8 +24,7 @@ module BulmaFormBuilder
   
     # true iff (validation) error on attribute found
     def has_errors? attr_name
-      #object&.errors&.[](attr_name)&.any?
-      object.errors[attr_name].any?
+      object&.errors&.[](attr_name)&.any?
     end
   
     # iff has errors:
