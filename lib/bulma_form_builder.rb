@@ -101,7 +101,7 @@ module BulmaFormBuilder
                             icon: icon,
                             label: label,
                             help_text: help_text) do |classes|
-        text_area(attr_name, class: "input #{classes}",
+        text_area(attr_name, class: "input #{classes} textarea",
                   placeholder: placeholder, size: "10x4")
       end
     end
