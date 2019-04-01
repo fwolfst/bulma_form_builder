@@ -32,7 +32,7 @@ module BulmaFormBuilder
     def errors_on attr_name
       if has_errors?(attr_name)
         content_tag :p, class: 'help is-danger' do
-          object.errors[attr_name].join("<br/>")
+          object.errors[attr_name].join("<br/>").html_safe
         end
       end
     end
