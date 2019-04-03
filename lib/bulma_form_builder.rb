@@ -183,11 +183,12 @@ module BulmaFormBuilder
       end
     end
   
-    def submit(msg='new')
+    def submit(value=nil, options={})
       horizontal_field_wrap() do |classes|
-        content_tag :button, class: 'button is-primary' do
-          msg
-        end
+        # Bulma examples work with button, but we take input/submit
+        #content_tag :button, class: 'button is-primary' do
+          super(value, options.merge({class: 'button is-primary'}))
+        #end
       end
     end
   
