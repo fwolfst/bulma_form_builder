@@ -96,13 +96,13 @@ module BulmaFormBuilder
       end
     end
   
-    def labeled_text_area attr_name, label: nil, icon: nil, placeholder: nil, help_text: nil
+    def labeled_text_area attr_name, label: nil, icon: nil, placeholder: nil, help_text: nil, size: 4
       horizontal_field_wrap(attr_name,
                             icon: icon,
                             label: label,
                             help_text: help_text) do |classes|
         text_area(attr_name, class: "input #{classes} textarea",
-                  placeholder: placeholder, size: "10x4")
+                  placeholder: placeholder, size: "10x#{size}")
       end
     end
 
@@ -184,13 +184,12 @@ module BulmaFormBuilder
     end
   
     def submit(value=nil, options={})
-      horizontal_field_wrap() do |classes|
-        # Bulma examples work with button, but we take input/submit
-        #content_tag :button, class: 'button is-primary' do
-          super(value, options.merge({class: 'button is-primary'}))
-        #end
-      end
+      # Bulma examples work with button, but we take input/submit
+      #content_tag :button, class: 'button is-primary' do
+        super(value, options.merge({class: 'button is-primary'}))
+      #end
     end
+
   
     private
   
