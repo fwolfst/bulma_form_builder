@@ -26,8 +26,7 @@ Adds respective classes automatically for following helpers:
 | helper | added CSS class | additional options|
 |--|--|--|
 | `form.label`      | `label` | |
-| `form.text_field` | `input` | `text_field :field, help: 'small help text'`
-                                `text_field :field, icon_left: 'fa fa-ethernet'`|
+| `form.text_field` | `input` | `text_field :field, help: 'small help text'` <br/> `text_field :field, icon_left: 'fa fa-ethernet'`|
  
 
 ## Installation
