@@ -5,11 +5,22 @@ module BulmaFormBuilder
     delegate :content_tag, :tag, to: :@template
 
     # add 'input' css class to text_fields
+    # additional: 'help' and 'icon_left' options
     def text_field(method, options={})
       (options[:class] ||= '') << ' input'
       text_field_html = super(method, options)
 
-      text_field_html + help(options[:help])
+      if options[:icon_left]
+        icon_html = content_tag(:span, class: 'icon is-small is-left') do
+          content_tag(:i, class: options[:icon_left]) {}
+        end
+
+        content_tag :p, class: 'control has-icons-left' do
+          text_field_html + icon_html.html_safe + help(options[:help])
+        end
+      else
+        text_field_html + help(options[:help])
+      end
     end
 
     # add 'label' css class to labels
