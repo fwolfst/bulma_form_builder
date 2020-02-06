@@ -1,6 +1,33 @@
 require "bulma_form_builder/railtie"
 
 module BulmaFormBuilder
+  class FormBuilder < ActionView::Helpers::FormBuilder
+    delegate :content_tag, :tag, to: :@template
+
+    # add 'input' css class to text_fields
+    def text_field(method, options={})
+      (options[:class] ||= '') << ' input'
+      text_field_html = super(method, options)
+
+      text_field_html + help(options[:help])
+    end
+
+    # add 'label' css class to labels
+    def label(method, options={})
+      (options[:class] ||= '') << ' label'
+      super(method, options)
+    end
+
+    def help(help_text)
+      return '' if !help_text.present?
+
+      content_tag :p, class: 'help' do
+        help_text
+      end
+    end
+
+  end
+
   class HorizontalBulmaFormBuilder < ActionView::Helpers::FormBuilder
     delegate :content_tag, :tag, to: :@template
   

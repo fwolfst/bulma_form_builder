@@ -13,6 +13,22 @@ form_for @myobject, builder: BulmaFormBuilder::HorizontalBulmaFormBuilder do |f|
 
 ```
 
+### Alternative way
+
+```ruby
+form_for @myobject, builder: BulmaFormBuilder::FormBuilder do |f|
+   = f.errors
+#...
+```
+
+Adds respective classes automatically for following helpers:
+
+| helper | added CSS class | additional options|
+|--|--|--|
+| `form.label`      | `label` ||
+| `form.text_field` | `input` | `text_field :field, help: 'small help text'`|
+ 
+
 ## Installation
 Add this line to your application's Gemfile:
 
