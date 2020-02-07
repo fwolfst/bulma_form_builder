@@ -8,6 +8,9 @@ module BulmaFormBuilder
     # additional: 'help' and 'icon_left' options
     def text_field(method, options={})
       (options[:class] ||= '') << ' input'
+
+      (options[:class] ||= '') << ' is-danger' if has_errors?(method)
+
       text_field_html = super(method, options)
 
       if options[:icon_left]
@@ -16,10 +19,10 @@ module BulmaFormBuilder
         end
 
         content_tag :p, class: 'control has-icons-left' do
-          text_field_html + icon_html.html_safe + help(options[:help])
+          text_field_html + icon_html.html_safe + help(options[:help]) + errors_on(method)
         end
       else
-        text_field_html + help(options[:help])
+        text_field_html + help(options[:help]) + errors_on(method)
       end
     end
 
@@ -43,10 +46,27 @@ module BulmaFormBuilder
       end
     end
 
+    # true iff (validation) error on attribute found
+    def has_errors? attr_name
+      object&.errors&.[](attr_name)&.any?
+    end
+
+    # iff has errors:
+    #   <p class="help is-danger">error1<br/>error2</p>
+    def errors_on attr_name
+      if has_errors?(attr_name)
+        content_tag :p, class: 'help is-danger' do
+          object.errors[attr_name].join("<br/>").html_safe
+        end
+      end
+    end
+
   end
 
   class HorizontalBulmaFormBuilder < ActionView::Helpers::FormBuilder
     delegate :content_tag, :tag, to: :@template
+
+    #def initialize(_, user, template, options)
   
     #   <div class="field-label is-normal"> ...(label class="label")... </div>
     def bulma_label attr_name
