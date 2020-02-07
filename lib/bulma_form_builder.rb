@@ -29,6 +29,12 @@ module BulmaFormBuilder
       super(method, options)
     end
 
+    def check_box(method, options={})
+      content_tag(:label, class: 'checkbox') do
+        super(method, options).html_safe + options[:label].to_s.html_safe
+      end
+    end
+
     def help(help_text)
       return '' if !help_text.present?
 
