@@ -26,6 +26,14 @@ module BulmaFormBuilder
       end
     end
 
+    def text_area(method, options={})
+      (options[:class] ||= '') << ' input textarea'
+
+      (options[:class] ||= '') << ' is-danger' if has_errors?(method)
+
+      text_field_html = super(method, options)
+    end
+
     # add 'label' css class to labels
     def label(method, options={})
       (options[:class] ||= '') << ' label'
