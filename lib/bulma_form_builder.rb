@@ -26,6 +26,16 @@ module BulmaFormBuilder
       end
     end
 
+    # add 'input' css class to number_field
+    def number_field(method, options={})
+      (options[:class] ||= '') << ' input'
+
+      (options[:class] ||= '') << ' is-danger' if has_errors?(method)
+
+      text_field_html = super(method, options) + help(options[:help])
+    end
+
+    # add 'input textarea' css class to text_area
     def text_area(method, options={})
       (options[:class] ||= '') << ' input textarea'
 

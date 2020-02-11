@@ -29,6 +29,7 @@ Adds respective classes automatically for following helpers:
 | `form.text_field` | `input` | `text_field :field, help: 'small help text'` <br/> `text_field :field, icon_left: 'fa fa-ethernet'`|
 | `form.check_box` | `checkbox` | `check_box :field, label: 'label to the right'` |
 | `form.text_area` | `input textarea` | |
+| `form.number_field` | `input` | `number_field :field, help: 'small help text'`|
  
 
 ## Installation
