@@ -1,0 +1,21 @@
+<h2 class="subtitle">Unstyled Form</h2>
+
+using
+<code>
+  form_with do |form|
+    # ...
+  end
+</code>
+<br/>
+<br/>
+
+<%= form_with do |form|  %>
+  <div class="field">
+    <%= form.label :text_field %>
+    <%= form.text_field :text_field %>
+  </div>
+  <div class="field">
+    <%= form.label :text_field_with_placeholder %>
+    <%= form.text_field :text_field_with_placeholder, placeholder: "With placeholder" %>
+  </div>
+<% end %>

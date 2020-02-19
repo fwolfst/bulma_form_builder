@@ -1,0 +1,25 @@
+<h2 class="subtitle">Using mutant/legacy</h2>
+
+<div class="notification is-danger">
+  This FormBuilder forces you to use non-standard FormBuilder methods.
+</div>
+
+using
+<code>
+  form_with builder: BulmaFormBuilder::HorizontalBulmaFormBuilder do |form|
+    # ...
+  end
+</code>
+<br/>
+<br/>
+
+<%= form_with do |form|  %>
+  <div class="field">
+    <%= form.label :text_field %>
+    <%= form.text_field :text_field %>
+  </div>
+  <div class="field">
+    <%= form.label :text_field_with_placeholder %>
+    <%= form.text_field :text_field_with_placeholder, placeholder: "With placeholder" %>
+  </div>
+<% end %>

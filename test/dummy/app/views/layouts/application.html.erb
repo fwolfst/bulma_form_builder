@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dummy</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Form examples</h2>
+        <div class="level">
+          <div class="level-item">
+            <%= link_to "Default", form_builder1_path %>
+          </div>
+          <div class="level-item">
+            <%= link_to "with BulmaFormBuilder::FormBuilder", form_builder2_path %>
+          </div>
+          <div class="level-item">
+            <%= link_to "horizontal", form_builder3_path %>
+          </div>
+          <div class="level-item">
+            <%= link_to "mutant", form_builder4_path %>
+          </div>
+        </div>
+        <%= yield %>
+      </div>
+    </section>
+    <section class="section">
+      <footer class="footer">
+        Read more about <a href="https://github.com/fwolfst/bulma-form-builder"> BulmaFormBuilder </a> <small> and contribute. </small>
+      </footer>
+    </section>
+  </body>
+</html>
