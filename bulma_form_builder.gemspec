@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.homepage    = "https://github.com/fwolfst/bulma_form_builder"
   spec.summary     = "Rough Rails FormBuilder to use with Bulma CSS Framework"
   spec.description = "Rough Rails FormBuilder to use with Bulma CSS Framework"
-  spec.license     = "MIT"
+  spec.license     = "GPLv3+"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
