@@ -7,7 +7,7 @@ Pretty unpolished FormBuilder to use in Rails with the [Bulma CSS Framework](htt
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bulma_form_builder'
+gem 'bulma_form_builder', '~> 0.2.1'
 ```
 
 And then execute:
@@ -50,7 +50,7 @@ However there is a tiny rails application (the one you'd use for this kind of en
 
 Note that the assets (bulma, Font Awesome) are not included in the demo, but are fetched via a CDN.  If you can walk this gem the extra mile to use gems to host these assets locally when starting the test/demo-server please tell me.
 
-You can fire up the demo application by executing
+You can fire up the demo application by checking out the repository and executing
 
 ```bash
 bin/demo
