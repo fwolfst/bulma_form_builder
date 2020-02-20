@@ -2,6 +2,11 @@
 
 Pretty unpolished FormBuilder to use in Rails with the [Bulma CSS Framework](https://bulma.io) (version 0.8.0).
 
+Note that there are two different and similar ruby gems for bulma forms:
+
+  * https://github.com/aki77/bulma_form_builder
+  * https://github.com/storkvist/bulma_form/tree/master/spec/dummy/app/views
+
 ## Installation
 
 Add this line to your application's Gemfile:
