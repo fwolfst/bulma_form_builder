@@ -10,12 +10,43 @@ using
 <br/>
 
 <%= form_with do |form|  %>
-  <div class="field">
-    <%= form.label :text_field %>
-    <%= form.text_field :text_field %>
+  <div class="box">
+    <h3 class="title is-4 has-text-centered"><i>"Natively" supported: text_field</i></h3>
+    <div class="field">
+      <%= form.label :text_field %>
+      <%= form.text_field :text_field %>
+    </div>
+    <div class="field">
+      <%= form.label :text_field_with_placeholder %>
+      <%= form.text_field :text_field_with_placeholder, placeholder: "With placeholder" %>
+    </div>
+    <div class="field">
+      <%= form.label :text_field_with_icon_left %>
+      <%= form.text_field :text_field_with_icon_left, icon_left: 'fa fa-ethernet', help: "With `icon_left` (and `help`) option" %>
+    </div>
   </div>
-  <div class="field">
-    <%= form.label :text_field_with_placeholder %>
-    <%= form.text_field :text_field_with_placeholder, placeholder: "With placeholder" %>
+
+  <div class="box">
+    <h3 class="title is-4 has-text-centered"><i>"Natively" supported: check_box</i></h3>
+    <div class="field">
+      <%= form.label :check_box %>
+      <%= form.check_box :check_box %>
+    </div>
+  </div>
+
+  <div class="box">
+    <h3 class="title is-4 has-text-centered"><i>"Natively" supported: number_field</i></h3>
+    <div class="field">
+      <%= form.label :number_field %>
+      <%= form.number_field :number_field %>
+    </div>
+  </div>
+
+  <div class="box">
+    <h3 class="title is-4 has-text-centered"><i>"Natively" supported: text_area</i></h3>
+    <div class="field">
+      <%= form.label :text_area %>
+      <%= form.text_area :text_area %>
+    </div>
   </div>
 <% end %>
