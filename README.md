@@ -40,19 +40,30 @@ In order to **not** wrap fields with errors in a form in an additional div (with
     # ...
 ```
 
+If you want icon support via Font Awesome, your Rails application should provide these.
+You can achieve that relatively easily by follow the instructions of https://github.com/FortAwesome/font-awesome-sass or https://github.com/bokmann/font-awesome-rails .
+
 ## Demo
 
 Unfortunately, there are no automatic tests implemented (contributions welcome).
 However there is a tiny rails application (the one you'd use for this kind of engine tests) in [test/dummy](test/dummy).
 
-You can run the demo by changing into that directory and firing up the server:
+Note that the assets (bulma, Font Awesome) are not included in the demo, but are fetched via a CDN.  If you can walk this gem the extra mile to use gems to host these assets locally when starting the test/demo-server please tell me.
+
+You can fire up the demo application by executing
+
+```bash
+bin/demo
+```
+. This should also pull the necessary dependencies. Afterwards, visit [http://localhost:3000](http://localhost:3000) with your favorite browser.
+
+
+If you want more control, you can run the demo by changing into that directory and firing up the server:
 
 ```bash
 cd test/dummy
-rails s
+rails s # append any options you'd like, e.g. to change the --port=<portnumber>
 ```
-
-Note that the assets (bulma, Font Awesome) are not included in the demo, but are fetched via a CDN.  If you can walk this gem the extra mile to use gems to host these assets locally when starting the test/demo-server please tell me.
 
 ## Usage
 
@@ -91,7 +102,6 @@ Adds respective classes automatically for following helpers:
 | `form.text_area` | `input textarea` | |
 | `form.number_field` | `input` | `number_field :field, help: 'small help text'`|
  
-
 
 ## Contributing
 Welcome, of course! Just drop me a line.
