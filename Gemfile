@@ -13,3 +13,6 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
+
+gem 'htmlbeautifier', group: [:development, :test]
+gem 'coderay', group: [:development, :test]

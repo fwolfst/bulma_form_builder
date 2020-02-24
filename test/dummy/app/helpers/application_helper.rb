@@ -1,6 +1,11 @@
 module ApplicationHelper
   def beautify html_string
-    HtmlBeautifier.beautify html_string.strip.gsub('>', ">\n").gsub('<', "\n<")
+    html = CodeRay.scan(
+      HtmlBeautifier.beautify(
+        html_string.strip.gsub('>', ">\n").gsub('<', "\n<"),
+      ).to_s,
+      :html
+    ).div().html_safe
   end
 
   def render_source args={}
