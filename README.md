@@ -112,6 +112,8 @@ Adds respective classes automatically for following helpers:
 Welcome, of course! Just drop me a line.
 
 ## License
+For fun, some of the files include comments to be compliant with [(FSFEs) reuse](https://reuse.software/).
+
 Copyright 2019,2020 Felix Wolfsteller
 
 The own ruby code is available as open source under the terms of the [GPLv3 License, or any later version](https://opensource.org/licenses/GPL-3.0), which is also found in the `LICENSE` file of this repository.
