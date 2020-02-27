@@ -10,16 +10,9 @@
   </head>
 
   <body>
+    <%= render partial: 'navbar' %>
     <section class="section">
       <div class="container">
-        <div class="level">
-          <div class="level-item">
-            <h1>Form examples</h1>
-          </div>
-          <div class="level-item">
-            <%= link_to "Default (without BulmaFormBuilder)", default_form_builder_path %>
-          </div>
-        </div>
         <%= yield %>
       </div>
     </section>
