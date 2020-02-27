@@ -8,7 +8,7 @@ module ApplicationHelper
       HtmlBeautifier.beautify(
         html_string.strip.gsub('>', ">\n").gsub('<', "\n<"),
       ).to_s,
-      :html
+      :erb
     ).div().html_safe
   end
 
