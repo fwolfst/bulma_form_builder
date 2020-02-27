@@ -12,19 +12,12 @@
   <body>
     <section class="section">
       <div class="container">
-        <h1 class="title">Form examples</h2>
         <div class="level">
           <div class="level-item">
-            <%= link_to "Default", form_builder1_path %>
+            <h1>Form examples</h1>
           </div>
           <div class="level-item">
-            <%= link_to "with BulmaFormBuilder::FormBuilder", form_builder2_path %>
-          </div>
-          <div class="level-item">
-            <%= link_to "horizontal", form_builder3_path %>
-          </div>
-          <div class="level-item">
-            <%= link_to "mutant", form_builder4_path %>
+            <%= link_to "Default (without BulmaFormBuilder)", default_form_builder_path %>
           </div>
         </div>
         <%= yield %>

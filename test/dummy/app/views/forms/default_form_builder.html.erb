@@ -1,0 +1,34 @@
+<h1 class="title">Unstyled Form</h2>
+
+using
+<code>
+  form_with do |form|
+    # ...
+  end
+</code>
+
+without specifying any FormBuilder. This will result in the standard Rails FormBuilder being used.
+<br/>
+<br/>
+
+<section class="section has-background-light">
+  <h2 class="title">Complete form example</h2>
+  <%= link_to 'Complete Form example on bulma doc page', 'https://bulma.io/documentation/form/general/#complete-form-example' %>
+  
+  <div class="box">
+    <h2 class="title is-7">Rendered Result</h2>
+    <%= render partial: 'complete_form' %>
+  </div>
+  
+  <div class="box">
+    <h2 class="title is-7">ERB Code</h2>
+    <%= render_source partial: 'complete_form' %>
+  </div>
+  <!-- Unfortunately, column view does not work nicely -->
+  <div class="box">
+    <h2 class="title is-7">HTML Output</h2>
+    <%= render_out partial: 'complete_form' %>
+  </div>
+<section class="section">
+
+<hr/>
