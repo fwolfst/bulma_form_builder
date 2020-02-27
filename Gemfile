@@ -14,5 +14,9 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem 'htmlbeautifier', group: [:development, :test]
-gem 'coderay', group: [:development, :test]
+group :development, :test do
+  gem 'htmlbeautifier'
+  gem 'coderay'
+  gem "bulma-rails", "~> 0.8"
+  gem 'font-awesome-sass'
+end

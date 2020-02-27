@@ -53,8 +53,6 @@ You can achieve that relatively easily by follow the instructions of https://git
 Unfortunately, there are no automatic tests implemented (contributions welcome).
 However there is a tiny rails application (the one you'd use for this kind of engine tests) in [test/dummy](test/dummy).
 
-Note that the assets (bulma, Font Awesome) are not included in the demo, but are fetched via a CDN.  If you can walk this gem the extra mile to use gems to host these assets locally when starting the test/demo-server please tell me.
-
 You can fire up the demo application by checking out the repository and executing
 
 ```bash
