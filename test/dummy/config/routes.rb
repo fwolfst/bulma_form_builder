@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'form_builder', to: 'forms#form_builder'
 
+  get 'form_builder_object_backed', to: 'forms#form_builder_object_backed'
+
   #get 'form_builder2', to: 'forms#form_builder2'
   #get 'form_builder3', to: 'forms#form_builder3'
   #get 'form_builder4', to: 'forms#form_builder4'
