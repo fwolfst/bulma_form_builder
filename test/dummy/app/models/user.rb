@@ -5,5 +5,5 @@ class User
   attr_accessor :username
   attr_accessor :email
 
-  validates :email, format: {with: /mymail/}
+  validates :email, format: {with: /mymail/, message: 'This email is invalid'}
 end
